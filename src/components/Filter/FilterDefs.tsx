@@ -126,10 +126,13 @@ export class FilterDefs extends React.Component<any, any> {
         return acc;
       }, {});
 
-    const definedFromHighlighted = highlights.reduce(function(
+    console.log('highlights')
+    console.log(highlights)
+    const definedFromHighlighted = (typeof highlights === 'undefined' ? [] : highlights).reduce(function(
       acc,
       [targetKey, targetValue, styleValue]
     ) {
+      console.log('in definedFromHighlighted')
       const filterName = "Highlight";
       const { filterProperties, filterPrimitives } = getNamespacedFilter({
         color: styleValue,

@@ -14,7 +14,7 @@ export class Kaavio {
   private _containerEl: any;
   private _diagramStyle: string;
   private _hidden: any[];
-  private _highlighted: any[];
+  private _highlights: any[];
   private _pathway: Record<string, any>;
   private _entitiesById: Record<string, any>;
   private _renderMethod: "hydrate" | "render";
@@ -23,7 +23,7 @@ export class Kaavio {
     {
       diagramStyle = "plain",
       hidden = [],
-      highlighted = [],
+      highlights = [],
       pathway = {} as Pathway,
       entitiesById = {} as EntitiesById,
       hydrate = false
@@ -34,7 +34,7 @@ export class Kaavio {
       : containerSelectorOrEl;
     this._diagramStyle = diagramStyle;
     this._hidden = hidden;
-    this._highlighted = highlighted;
+    this._highlights = highlights;
     this._pathway = pathway;
     this._entitiesById = entitiesById;
     this._renderMethod = hydrate ? "hydrate" : "render";
@@ -51,8 +51,8 @@ export class Kaavio {
     this.render();
   }
 
-  set highlighted(highlighted: any[]) {
-    this._highlighted = highlighted;
+  set highlights(highlights: any[]) {
+    this._highlights = highlights;
     this.render();
   }
 
@@ -61,7 +61,7 @@ export class Kaavio {
       _containerEl,
       _diagramStyle,
       _hidden,
-      _highlighted,
+      _highlights,
       _pathway
     } = this;
     this._pathway = pathway;
@@ -74,7 +74,7 @@ export class Kaavio {
       _containerEl,
       _diagramStyle,
       _hidden,
-      _highlighted,
+      _highlights,
       _entitiesById
     } = this;
     this._entitiesById = entitiesById;
@@ -87,7 +87,7 @@ export class Kaavio {
       _containerEl,
       _diagramStyle,
       _hidden,
-      _highlighted,
+      _highlights,
       _pathway,
       _entitiesById,
       _renderMethod
@@ -98,7 +98,7 @@ export class Kaavio {
         {...{
           theme: {},
           hidden: _hidden,
-          highlighted: _highlighted,
+          highlights: _highlights,
           pathway: _pathway,
           entitiesById: _entitiesById
         }}

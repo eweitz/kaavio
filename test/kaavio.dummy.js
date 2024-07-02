@@ -20,7 +20,7 @@ export class Kaavio {
       : containerSelectorOrEl;
     this._diagramStyle = diagramStyle;
     this._hidden = hidden;
-    this._highlighted = highlighted;
+    this._highlights = highlighted;
     this._pathway = pathway;
     this._entitiesById = entitiesById;
     this._renderMethod = hydrate ? "hydrate" : "render";
@@ -35,7 +35,7 @@ export class Kaavio {
     this.render();
   }
   set highlighted(highlighted) {
-    this._highlighted = highlighted;
+    this._highlights = highlighted;
     this.render();
   }
   set pathway(pathway) {
@@ -43,7 +43,7 @@ export class Kaavio {
       _containerEl,
       _diagramStyle,
       _hidden,
-      _highlighted,
+      _highlights,
       _pathway
     } = this;
     this._pathway = pathway;
@@ -55,7 +55,7 @@ export class Kaavio {
       _containerEl,
       _diagramStyle,
       _hidden,
-      _highlighted,
+      _highlights,
       _entitiesById
     } = this;
     this._entitiesById = entitiesById;
@@ -67,7 +67,7 @@ export class Kaavio {
       _containerEl,
       _diagramStyle,
       _hidden,
-      _highlighted,
+      _highlights,
       _pathway,
       _entitiesById,
       _renderMethod
@@ -85,7 +85,7 @@ export class Kaavio {
             },
             theme,
             hidden: _hidden,
-            highlighted: _highlighted,
+            highlights: _highlights,
             pathway: _pathway,
             entitiesById: _entitiesById
           }
