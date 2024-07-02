@@ -55,7 +55,11 @@ export function arrayify<T>(
   if (typeof input === "undefined") {
     return [];
   }
-  return isArray(input) ? input : [input];
+  if (isArray(input)) {
+    return input as Array<T>
+  } else {
+    return [input] as Array<T>
+  }
 }
 
 export function isJsonldListSetPrimitive(x): boolean {
