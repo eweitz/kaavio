@@ -160,7 +160,7 @@ function parseThemeSpecPropertyPair(
       const kaavioBase =
         resultFromReadPkgUp.pkg.name === "kaavio"
           ? path.dirname(resultFromReadPkgUp.path)
-          : "kaavio";
+          : "eweitz-kaavio";
       console.log(`kaavioBase: ${kaavioBase}`);
       semiResolvedSrc = `${kaavioBase}/es5/drawers/${themeSpecPropertyKey}/index`;
       console.log(`Resolved kaavio as ${semiResolvedSrc}`);
@@ -570,7 +570,7 @@ program
 				https://useiconic.com/open
 				https://thenounproject.com/term/biology/1130/
 				https://www.flaticon.com/free-icons/biology_23352
-				
+
 				http://www.simolecule.com/cdkdepict/depict.html -- You can use BridgeDb to get the SMILES string, e.g.:
 
 					curl http://webservice.bridgedb.org/Human/attributes/Ch/HMDB00161?attrName=SMILES
