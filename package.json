@@ -3,7 +3,7 @@
   "version": "5.0.2",
   "description": "Diagram viewer and editor for biological pathways.",
   "main": "es5/index.js",
-  "module": "esnext/index.js",
+  "module": "es5/index.js",
   "jsnext:main": "esnext/index.js",
   "typings": "esnext/index",
   "engines": {
